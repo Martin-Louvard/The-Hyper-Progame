@@ -1,0 +1,171 @@
+@import "~bootstrap/scss/bootstrap";
+$primary-color: white;
+$secondary-color: #d20a32;
+$bg: #191919;
+$box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
+$mobile-width: 599px;
+@font-face {
+  font-family: 'Big Noodles';
+  src: url('../fonts/big_noodle_titling.ttf');
+}
+
+@font-face{
+    font-family: 'Roboto Bold';
+src: url('../fonts/Roboto-Bold.ttf')
+}
+
+@mixin mobile {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+body {
+    color: $primary-color;
+    background-color: $bg;
+    margin-bottom: 50px;
+}
+
+h1 {
+    color: $primary-color;
+    background-color: $bg;
+    font-weight: bold;
+    font-family: 'Big Noodles' !important;
+
+}
+
+h2{
+    font-family: 'Big Noodles' !important;
+
+}
+
+h2.rating {
+    color: $secondary-color;
+    position: relative;
+    top: 50px;
+    left: 870px;
+    font-weight: bold;
+    font-family: 'Big Noodles' !important;
+    width: fit-content;
+
+}
+
+
+h6{
+    font-weight: bold;
+    font-family: 'Roboto Bold' !important;
+
+
+}
+
+.bg-black {
+    background-color: $bg;
+}
+
+#footer {
+    position: fixed;
+    height: 50px;
+    bottom: 0px;
+    margin-bottom: 0px;
+}
+
+a {
+    color: $primary-color !important;
+    text-decoration: none !important;
+}
+
+a.intern{
+    color: $primary-color !important;
+    text-decoration: none !important;
+	position: relative !important;
+	&:after {
+		content: '';
+		height: 3px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		background: $secondary-color;
+		transition: 0.2s;
+	}
+
+	&:hover:after {
+		width: 100%;
+	}
+	
+	&.block {
+		display: block;
+		padding: 0.5em;
+		
+		&:hover {
+			background: $primary-color;
+		}
+	}
+}
+label {
+    position: relative;
+}
+
+label:before {
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    background: url("../logos/search.svg") center / contain no-repeat;
+}
+
+input {
+    padding: 10px 30px;
+    border-radius: 90px;
+}
+
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+    outline-offset: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.text-red {
+color: $secondary-color
+}
+
+.btn-red {
+  color: $primary-color;
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+}
+
+.btn-red:hover {
+  color: $primary-color;
+  background-color:$secondary-color;
+  border-color: $secondary-color;
+}
+
+.btn-red:focus, .btn-red.focus {
+  color: $primary-color;
+  background-color:$secondary-color;
+  border-color: $secondary-color;
+  box-shadow: $box-shadow;
+}
+
+.card {
+border: 0px !important;
+}
+
+.website{
+position: relative ;
+bottom: 110px;
+left: 890px;
+}
+
+a.outer-link{
+color: $primary-color !important;
+text-decoration: underline $secondary-color !important;
+}
