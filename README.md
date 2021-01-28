@@ -1,6 +1,6 @@
 # project-martin
 
-Empty project.
+This is a fictional website for exercise
 
 ## Building and running on localhost
 
